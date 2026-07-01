@@ -1,20 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% load static %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<{% block title %}Tienda de Videojuegos - Inicio{% endblock %}
 
-<body>
-    <h1>Bienvenido a la tienda de Videojuegos</h1>
-    <p>Explora nuestro catálogo de los mejores videojuegos</p>
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center text-body mb-4">Bienvenido a la Tienda de Videojuegos</h1>
+    <p class="text-center text-body">Explora nuestra amplia selección de videojuegos para todas las plataformas.</p>
 
-    <footer>
-        <p>&copy; 2023 Tienda de Videojuegos. Todos los derechos reservados.</p>
-        <a href="{% url 'contacto' %}">Contacto</a>
-    </footer>
-</body>
-
-</html>
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <div class="card bg-body text-body mb-4">
+                <img src="{% static 'img/game1.jpg' %}" class="card-img-top" alt="Juego 1">
+                <div class="card-body">
+                    <h5 class="card-title">Juego 1</h5>
+                    <p class="card-text">Descripción breve del Juego 1.</p>
+                    <a href="#" class="btn btn-primary">Ver más</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bg-body text-body mb-4">
+                <img src="{% static 'img/game2.jpg' %}" class="card-img-top" alt="Juego 2">
+                <div class="card-body">
+                    <h5 class="card-title">Juego 2</h5>
+                    <p class="card-text">Descripción breve del Juego 2.</p>
+                    <a href="#" class="btn btn-primary">Ver más</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bg-body text-body mb-4">
+                <img src="{% static 'img/game3.jpg' %}" class="card-img-top" alt="Juego 3">
+                <div class="card-body">
+                    <h5 class="card-title">Juego 3</h5>
+                    <p class="card-text">Descripción breve del Juego 3.</p>
+                    <a href="#" class="btn btn-primary">Ver más</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}  
