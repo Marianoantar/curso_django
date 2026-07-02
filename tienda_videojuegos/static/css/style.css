@@ -1,0 +1,36 @@
+#toggle-theme {
+    background-color: #0d6efd;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#toggle-theme:hover {
+    background-color: #0a53ff;
+}
+
+#toggle-theme {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+#toggle-theme .theme-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+}
+
+#toggle-theme[data-bs-theme="dark"] .theme-icon {
+    content: "\f186"; /* Ícono de luna */
+}
+
+#toggle-theme[data-bs-theme="light"] .theme-icon {
+    content: "\f185"; /* Ícono de sol */
+}

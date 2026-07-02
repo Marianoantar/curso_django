@@ -7,6 +7,7 @@
     <title>{% block title %}Tienda de Videojuegos{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXmDTKu6+ai5IwFK2nrUa+Jp8fH7f2f4rD6l+4G/3DZ0GZ7X4y2yUvD9J5iQ+8f1qHhJ8ZxZk7+oPv7nGy3qA=" crossorigin="anonymous" />
     <script src="{% static 'js/script.js' %}"></script>
 </head>
 
@@ -28,9 +29,9 @@
                     </ul>
                 </div>
 
-                <button id="toggle-theme" class="btn btn-outline-primary">
-                    <i class="fas fa-toggle-on"></i> Cambiar Tema
-                </button>               
+                <button id="toggle-theme" class="btn btn-primary rounded-pill">
+                    <i class="fas fa-sun"></i> Cambiar Tema
+                </button>          
             </div>
         </nav>
     </header>
@@ -38,11 +39,11 @@
     {% block content %}
     {% endblock %}
 
-    <footer class="bg-body text-body py-4">
+    <footer class="bg-dark text-light py-4">
         <div class="container text-center">
             <p>&copy; 2026 Tienda de Videojuegos. Todos los derechos reservados.</p>
-            <a href="{% url 'home' %}" class="text-body">Inicio</a> | 
-            <a href="{% url 'contacto' %}" class="text-body">Contacto</a>
+            <a href="{% url 'home' %}" class="text-light">Inicio</a> | 
+            <a href="{% url 'contacto' %}" class="text-light">Contacto</a>
         </div>
     </footer>   
     
