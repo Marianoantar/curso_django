@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Listado de Juegos{% endblock %}
+
+{% block content %}
+    <h2 class="text-body">Lista de Juegos</h2>
+    <div class="row">
+        {% for juego in lista_juegos %}
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="{{ juego.imagen_url }}" class="card-img-top" alt="{{ juego.nombre }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ juego.nombre }}</h5>
+                        <p class="card-text">{{ juego.descripcion|truncatewords:20 }}</p>
+                        <p class="card-text"><strong>Precio:</strong> ${{ juego.precio }}</p>
+                        {% comment %} <a href="{% url 'detalle_juego' juego.id %}" class="btn btn-primary">Ver Detalles</a> {% endcomment %}
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <p>No hay juegos disponibles.</p>
+        {% endfor %}
+    </div>
+
+{% endblock %}
+
+        
